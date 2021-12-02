@@ -322,7 +322,7 @@ public class MainGUI extends javax.swing.JFrame {
         labelMSPunti.setText(String.valueOf((Integer)this.jSpinner3.getValue() * punti)+" ms");
         labelMSVirgole.setText(String.valueOf((Integer)this.jSpinner4.getValue() * virgole)+" ms");
         labelMSSpazi.setText(String.valueOf((Integer)this.jSpinner2.getValue() * spazi)+" ms");
-        LABEL_LETTERE.setText(String.valueOf((Integer)this.jSpinner1.getValue() * lunghezza)+" ms");
+        labelMSTotali.setText(String.valueOf((Integer)this.jSpinner1.getValue() * lunghezza)+" ms");
         int totMillisec = (Integer)this.jSpinner5.getValue() * caratteri + (Integer)this.jSpinner6.getValue() * numeri + (Integer)this.jSpinner7.getValue() * altro + (Integer)this.jSpinner3.getValue() * punti + (Integer)this.jSpinner4.getValue() * virgole + (Integer)this.jSpinner2.getValue() * spazi + (Integer)this.jSpinner1.getValue() * lunghezza;
         labelTotal.setText(String.valueOf(totMillisec));
         
