@@ -5,6 +5,8 @@
 package com.mycompany.guinumeroparole;
 
 import java.awt.Color;
+import java.awt.GridLayout;
+import java.awt.LayoutManager;
 import static java.lang.String.valueOf;
 
 /**
@@ -18,6 +20,7 @@ public class MainGUI extends javax.swing.JFrame {
      */
     public MainGUI() {
         initComponents();
+        GridLayout layout = (GridLayout) jPanel1.getLayout();
     }
     String testo;
 
@@ -34,21 +37,38 @@ public class MainGUI extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         labelCaratteri = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
         jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
+        labelSpazi = new javax.swing.JLabel();
+        jSpinner2 = new javax.swing.JSpinner();
+        jLabel3 = new javax.swing.JLabel();
+        labelPunti = new javax.swing.JLabel();
+        jSpinner3 = new javax.swing.JSpinner();
+        jLabel4 = new javax.swing.JLabel();
+        labelVirgole = new javax.swing.JLabel();
+        jSpinner4 = new javax.swing.JSpinner();
         jLabel13 = new javax.swing.JLabel();
         jLabelLettere = new javax.swing.JLabel();
-        jSpinner1 = new javax.swing.JSpinner();
+        jSpinner5 = new javax.swing.JSpinner();
+        jLabel10 = new javax.swing.JLabel();
+        labelNumeri = new javax.swing.JLabel();
+        jSpinner6 = new javax.swing.JSpinner();
+        jLabel11 = new javax.swing.JLabel();
+        labelAltriCaratteri = new javax.swing.JLabel();
+        jSpinner7 = new javax.swing.JSpinner();
+        jPanel2 = new javax.swing.JPanel();
+        labelMSTotali = new javax.swing.JLabel();
+        labelMSSpazi = new javax.swing.JLabel();
+        labelMSPunti = new javax.swing.JLabel();
+        labelMSVirgole = new javax.swing.JLabel();
+        LABEL_LETTERE = new javax.swing.JLabel();
+        labelMSNumeri = new javax.swing.JLabel();
+        labelMSAltriCaratteri = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        labelTotal = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -64,63 +84,154 @@ public class MainGUI extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("PUNTI:");
+        jPanel1.setBackground(new java.awt.Color(255, 170, 100));
+        jPanel1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 1, true));
+        jPanel1.setLayout(new java.awt.GridLayout(10, 3));
 
-        jLabel1.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-
-        jLabel4.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("VIRGOLE:");
-
-        jLabel5.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel5.setText("CARATTERI TOTALI:");
+        jPanel1.add(jLabel5);
 
         labelCaratteri.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
         labelCaratteri.setForeground(new java.awt.Color(255, 0, 51));
         labelCaratteri.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(labelCaratteri);
 
-        jLabel6.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 5));
+        jSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        jSpinner1.setMaximumSize(new java.awt.Dimension(60, 60));
+        jPanel1.add(jSpinner1);
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel7.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel7.setText("SPAZI:");
+        jPanel1.add(jLabel7);
 
-        jLabel8.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelSpazi.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
+        labelSpazi.setForeground(new java.awt.Color(255, 0, 51));
+        labelSpazi.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(labelSpazi);
 
-        jLabel9.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 0, 51));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jSpinner2.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 5));
+        jSpinner2.setMaximumSize(new java.awt.Dimension(60, 60));
+        jPanel1.add(jSpinner2);
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel10.setText("NUMERI:");
+        jLabel3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel3.setText("PUNTI:");
+        jPanel1.add(jLabel3);
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("ALTRI CARATTERI:");
+        labelPunti.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
+        labelPunti.setForeground(new java.awt.Color(255, 0, 0));
+        labelPunti.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(labelPunti);
 
-        jLabel12.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 0, 0));
-        jLabel12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jSpinner3.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 5));
+        jSpinner3.setMaximumSize(new java.awt.Dimension(60, 60));
+        jPanel1.add(jSpinner3);
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 3, 36)); // NOI18N
-        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel4.setText("VIRGOLE:");
+        jPanel1.add(jLabel4);
+
+        labelVirgole.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
+        labelVirgole.setForeground(new java.awt.Color(255, 0, 0));
+        labelVirgole.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(labelVirgole);
+
+        jSpinner4.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 5));
+        jSpinner4.setMaximumSize(new java.awt.Dimension(60, 60));
+        jPanel1.add(jSpinner4);
+
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel13.setText("LETTERE:");
+        jPanel1.add(jLabel13);
 
         jLabelLettere.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
         jLabelLettere.setForeground(new java.awt.Color(255, 0, 0));
         jLabelLettere.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(jLabelLettere);
 
-        jSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 5));
+        jSpinner5.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 5));
+        jSpinner5.setMaximumSize(new java.awt.Dimension(60, 60));
+        jPanel1.add(jSpinner5);
+
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel10.setText("NUMERI:");
+        jPanel1.add(jLabel10);
+
+        labelNumeri.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
+        labelNumeri.setForeground(new java.awt.Color(255, 0, 51));
+        labelNumeri.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(labelNumeri);
+
+        jSpinner6.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 5));
+        jSpinner6.setMaximumSize(new java.awt.Dimension(60, 60));
+        jPanel1.add(jSpinner6);
+
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel11.setText("ALTRI CARATTERI:");
+        jPanel1.add(jLabel11);
+
+        labelAltriCaratteri.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
+        labelAltriCaratteri.setForeground(new java.awt.Color(255, 0, 0));
+        labelAltriCaratteri.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jPanel1.add(labelAltriCaratteri);
+
+        jSpinner7.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 5));
+        jSpinner7.setMaximumSize(new java.awt.Dimension(60, 60));
+        jPanel1.add(jSpinner7);
+
+        jPanel2.setBackground(new java.awt.Color(255, 170, 100));
+        jPanel2.setLayout(new java.awt.GridLayout(10, 1));
+
+        labelMSTotali.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        labelMSTotali.setForeground(new java.awt.Color(255, 0, 0));
+        labelMSTotali.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel2.add(labelMSTotali);
+
+        labelMSSpazi.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        labelMSSpazi.setForeground(new java.awt.Color(255, 0, 0));
+        labelMSSpazi.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel2.add(labelMSSpazi);
+
+        labelMSPunti.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        labelMSPunti.setForeground(new java.awt.Color(255, 0, 0));
+        labelMSPunti.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel2.add(labelMSPunti);
+
+        labelMSVirgole.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        labelMSVirgole.setForeground(new java.awt.Color(255, 0, 0));
+        labelMSVirgole.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel2.add(labelMSVirgole);
+
+        LABEL_LETTERE.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        LABEL_LETTERE.setForeground(new java.awt.Color(255, 0, 0));
+        LABEL_LETTERE.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel2.add(LABEL_LETTERE);
+
+        labelMSNumeri.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        labelMSNumeri.setForeground(new java.awt.Color(255, 0, 0));
+        labelMSNumeri.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel2.add(labelMSNumeri);
+
+        labelMSAltriCaratteri.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        labelMSAltriCaratteri.setForeground(new java.awt.Color(255, 0, 0));
+        labelMSAltriCaratteri.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jPanel2.add(labelMSAltriCaratteri);
+
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel6.setText("MILLISECONDI TOTALI:");
+
+        labelTotal.setFont(new java.awt.Font("DialogInput", 1, 36)); // NOI18N
+        labelTotal.setForeground(new java.awt.Color(255, 0, 51));
+        labelTotal.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -128,96 +239,36 @@ public class MainGUI extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jScrollPane1)
             .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 248, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(labelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(20, 20, 20)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabelLettere, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(0, 0, Short.MAX_VALUE))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 392, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(522, 522, 522))))))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(labelCaratteri, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 372, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(41, 41, 41))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(416, 416, 416))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                    .addContainerGap(568, Short.MAX_VALUE)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 464, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 106, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(23, 23, 23)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(labelTotal, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(labelCaratteri, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(27, 27, 27)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jSpinner1)
-                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addComponent(jLabelLettere, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(37, Short.MAX_VALUE))
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(193, 193, 193)
-                    .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(444, Short.MAX_VALUE)))
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 478, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -256,14 +307,25 @@ public class MainGUI extends javax.swing.JFrame {
 
         }
         labelCaratteri.setText(String.valueOf(lunghezza));
-        jLabel6.setText(String.valueOf(punti));
-        jLabel1.setText(String.valueOf(virgole));
-        jLabel9.setText(String.valueOf(numeri));
-        jLabel8.setText(String.valueOf(spazi));
-        jLabel12.setText(String.valueOf(altro));
+        labelPunti.setText(String.valueOf(punti));
+        labelVirgole.setText(String.valueOf(virgole));
+        labelNumeri.setText(String.valueOf(numeri));
+        labelSpazi.setText(String.valueOf(spazi));
+        labelAltriCaratteri.setText(String.valueOf(altro));
         jLabelLettere.setText(String.valueOf(caratteri));
         
-        Integer value = (Integer)this.jSpinner1.getValue();
+        int temp = (Integer)this.jSpinner5.getValue() * caratteri;
+        LABEL_LETTERE.setText(String.valueOf(temp)+" ms");
+        
+        labelMSNumeri.setText(String.valueOf((Integer)this.jSpinner6.getValue() * numeri)+" ms");
+        labelMSAltriCaratteri.setText(String.valueOf((Integer)this.jSpinner7.getValue() * altro)+" ms");
+        labelMSPunti.setText(String.valueOf((Integer)this.jSpinner3.getValue() * punti)+" ms");
+        labelMSVirgole.setText(String.valueOf((Integer)this.jSpinner4.getValue() * virgole)+" ms");
+        labelMSSpazi.setText(String.valueOf((Integer)this.jSpinner2.getValue() * spazi)+" ms");
+        LABEL_LETTERE.setText(String.valueOf((Integer)this.jSpinner1.getValue() * lunghezza)+" ms");
+        int totMillisec = (Integer)this.jSpinner5.getValue() * caratteri + (Integer)this.jSpinner6.getValue() * numeri + (Integer)this.jSpinner7.getValue() * altro + (Integer)this.jSpinner3.getValue() * punti + (Integer)this.jSpinner4.getValue() * virgole + (Integer)this.jSpinner2.getValue() * spazi + (Integer)this.jSpinner1.getValue() * lunghezza;
+        labelTotal.setText(String.valueOf(totMillisec));
+        
        
         
 
@@ -309,23 +371,40 @@ public class MainGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel LABEL_LETTERE;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JLabel jLabelLettere;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSpinner jSpinner1;
+    private javax.swing.JSpinner jSpinner2;
+    private javax.swing.JSpinner jSpinner3;
+    private javax.swing.JSpinner jSpinner4;
+    private javax.swing.JSpinner jSpinner5;
+    private javax.swing.JSpinner jSpinner6;
+    private javax.swing.JSpinner jSpinner7;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel labelAltriCaratteri;
     private javax.swing.JLabel labelCaratteri;
+    private javax.swing.JLabel labelMSAltriCaratteri;
+    private javax.swing.JLabel labelMSNumeri;
+    private javax.swing.JLabel labelMSPunti;
+    private javax.swing.JLabel labelMSSpazi;
+    private javax.swing.JLabel labelMSTotali;
+    private javax.swing.JLabel labelMSVirgole;
+    private javax.swing.JLabel labelNumeri;
+    private javax.swing.JLabel labelPunti;
+    private javax.swing.JLabel labelSpazi;
+    private javax.swing.JLabel labelTotal;
+    private javax.swing.JLabel labelVirgole;
     // End of variables declaration//GEN-END:variables
 }
